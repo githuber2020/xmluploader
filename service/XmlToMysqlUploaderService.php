@@ -19,8 +19,7 @@ class XmlToMysqlUploaderService
     /**
      * @var int Limit of values in one insert to MySql
      */
-//    protected $partialLimit = 1000;
-    protected $partialLimit = 10;
+   protected $partialLimit = 1000;
 
     /**
      * Injection of dependencies
@@ -47,10 +46,10 @@ class XmlToMysqlUploaderService
     {
         $this->xmlReader->initWithFilePath($filePath);
 
-//        do {
+       do {
             $recordCollection = $this->xmlReader->readCollectionWithLimit($this->partialLimit);
             $this->recordRepository->saveCollection($recordCollection);
-//        } while ($recordCollection);
+       } while ($recordCollection);
     }
 
 }
