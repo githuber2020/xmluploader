@@ -1,0 +1,12 @@
+{
+    "name": "my/uploader",
+    "description": "Xml file uploader to MySQL",
+    "autoload": {
+        "psr-4": {
+            "My\\Service\\": "service",
+            "My\\Model\\": "model",
+            "My\\Repository\\": "repository",
+            "My\\Helper\\": "helper"
+        }
+    }
+}
